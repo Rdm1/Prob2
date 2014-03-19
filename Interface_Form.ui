@@ -2006,7 +2006,7 @@
   <widget class="QLabel" name="label_com_razvertka_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>40</x>
      <y>330</y>
      <width>371</width>
      <height>16</height>
@@ -2016,12 +2016,26 @@
     <string>Макс</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_com_razvertka_4">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>350</y>
+     <width>371</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>3 инфо</string>
+   </property>
+  </widget>
   <zorder>main_frame</zorder>
   <zorder>frame_3</zorder>
   <zorder>label_Info_0</zorder>
   <zorder>frame_4</zorder>
   <zorder>label_com_razvertka_2</zorder>
   <zorder>label_com_razvertka_3</zorder>
+  <zorder>label_com_razvertka_4</zorder>
  </widget>
  <tabstops>
   <tabstop>comboBox_menu</tabstop>
