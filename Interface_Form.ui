@@ -1882,12 +1882,25 @@
      </property>
     </item>
    </widget>
+   <widget class="QLabel" name="label_com_razvertka_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>210</y>
+      <width>371</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Настройка отображения параметров</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QFrame" name="frame_4">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>380</y>
+     <x>340</x>
+     <y>330</y>
      <width>131</width>
      <height>181</height>
     </rect>
