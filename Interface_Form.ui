@@ -351,7 +351,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QFrame" name="frame_gen">
@@ -1574,9 +1574,9 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>110</y>
+         <y>100</y>
          <width>131</width>
-         <height>31</height>
+         <height>40</height>
         </rect>
        </property>
        <property name="palette">
@@ -1603,9 +1603,9 @@
           <colorrole role="Base">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>222</red>
-             <green>167</green>
-             <blue>26</blue>
+             <red>224</red>
+             <green>235</green>
+             <blue>255</blue>
             </color>
            </brush>
           </colorrole>
@@ -1632,9 +1632,9 @@
           <colorrole role="Base">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>222</red>
-             <green>167</green>
-             <blue>26</blue>
+             <red>224</red>
+             <green>235</green>
+             <blue>255</blue>
             </color>
            </brush>
           </colorrole>
@@ -1672,69 +1672,19 @@
        </property>
        <item>
         <property name="text">
-         <string> Кириллица</string>
+         <string>  Раскладка</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string> Латинница</string>
+         <string>  Кириллица</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string/>
+         <string>  Латиница</string>
         </property>
        </item>
-      </widget>
-      <widget class="QLabel" name="label_com_inversion_2">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>90</y>
-         <width>96</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="palette">
-        <palette>
-         <active>
-          <colorrole role="WindowText">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>21</red>
-             <green>4</green>
-             <blue>253</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </active>
-         <inactive>
-          <colorrole role="WindowText">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>21</red>
-             <green>4</green>
-             <blue>253</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </inactive>
-         <disabled>
-          <colorrole role="WindowText">
-           <brush brushstyle="SolidPattern">
-            <color alpha="255">
-             <red>120</red>
-             <green>120</green>
-             <blue>120</blue>
-            </color>
-           </brush>
-          </colorrole>
-         </disabled>
-        </palette>
-       </property>
-       <property name="text">
-        <string>Раскладка </string>
-       </property>
       </widget>
      </widget>
     </widget>
@@ -2311,7 +2261,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="page_9">
     <widget class="QFrame" name="frame_for_settings_addition">
