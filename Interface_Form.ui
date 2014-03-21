@@ -350,7 +350,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page_9">
      <widget class="QFrame" name="frame_for_settings_addition">
@@ -3730,9 +3730,9 @@ background-color: rgb(195, 195, 195);
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>0</red>
-             <green>99</green>
-             <blue>41</blue>
+             <red>29</red>
+             <green>0</green>
+             <blue>248</blue>
             </color>
            </brush>
           </colorrole>
@@ -3768,9 +3768,9 @@ background-color: rgb(195, 195, 195);
           <colorrole role="WindowText">
            <brush brushstyle="SolidPattern">
             <color alpha="255">
-             <red>0</red>
-             <green>99</green>
-             <blue>41</blue>
+             <red>29</red>
+             <green>0</green>
+             <blue>248</blue>
             </color>
            </brush>
           </colorrole>
@@ -3844,11 +3844,11 @@ background-color: rgb(195, 195, 195);
        </property>
        <property name="font">
         <font>
-         <pointsize>14</pointsize>
+         <pointsize>13</pointsize>
         </font>
        </property>
        <property name="text">
-        <string>Настройка отображения параметров</string>
+        <string>   Настройка отображения параметров</string>
        </property>
       </widget>
       <widget class="QCheckBox" name="checkBox_24">
@@ -8191,7 +8191,7 @@ background-color: rgb(195, 195, 195);</string>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>8</number>
+    <number>10</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QFrame" name="frame_gen">
