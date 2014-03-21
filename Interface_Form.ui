@@ -1709,14 +1709,6 @@
        </property>
       </widget>
      </widget>
-     <zorder>label_vrch_x_2</zorder>
-     <zorder>comboBox_vrch_aru_2</zorder>
-     <zorder>label_vrch_y_2</zorder>
-     <zorder>label_vrch_aru_2</zorder>
-     <zorder>spinBox_vrch_spot_2</zorder>
-     <zorder>spinBox_vrch_y_2</zorder>
-     <zorder>spinBox_vrch_x_2</zorder>
-     <zorder>frame_strobe</zorder>
     </widget>
     <widget class="QWidget" name="page_2">
      <widget class="QFrame" name="frame_com">
@@ -2058,7 +2050,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="page_9">
      <widget class="QFrame" name="frame_for_settings_addition">
@@ -9760,12 +9752,6 @@ background-color: rgb(195, 195, 195);</string>
      </widget>
     </widget>
    </widget>
-   <zorder>stackedWidget</zorder>
-   <zorder>line</zorder>
-   <zorder>label_Info_2</zorder>
-   <zorder>label_Info_1</zorder>
-   <zorder>frame_for_settings_channel</zorder>
-   <zorder>stackedWidget_2</zorder>
   </widget>
   <widget class="QComboBox" name="comboBox_menu">
    <property name="geometry">
@@ -9889,11 +9875,79 @@ background-color: rgb(195, 195, 195);</string>
     <set>Qt::TextEditorInteraction</set>
    </property>
   </widget>
-  <zorder>main_frame</zorder>
-  <zorder>frame_for_buttons</zorder>
-  <zorder>comboBox_menu</zorder>
-  <zorder>progressBar_3</zorder>
-  <zorder>label_Info_4</zorder>
+  <widget class="QLabel" name="label_Info_3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>350</y>
+     <width>71</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>243</red>
+         <green>243</green>
+         <blue>243</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>243</red>
+         <green>243</green>
+         <blue>243</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>120</red>
+         <green>120</green>
+         <blue>120</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="text">
+    <string>Info_1</string>
+   </property>
+   <property name="scaledContents">
+    <bool>false</bool>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="indent">
+    <number>-2</number>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::TextEditorInteraction</set>
+   </property>
+  </widget>
  </widget>
  <tabstops>
   <tabstop>comboBox_menu</tabstop>
