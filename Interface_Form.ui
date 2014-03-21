@@ -871,7 +871,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-10</y>
+        <y>0</y>
         <width>131</width>
         <height>241</height>
        </rect>
@@ -931,7 +931,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>Зад. ПЭП, uS</string>
+        <string>ПЭП, uS</string>
        </property>
       </widget>
       <widget class="QSpinBox" name="spinBox_pep_time">
@@ -984,9 +984,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-10</y>
+        <y>0</y>
         <width>151</width>
-        <height>241</height>
+        <height>231</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -1005,7 +1005,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>Скорость, m/s</string>
+        <string>Скор., m/s</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_obj_method">
@@ -1031,7 +1031,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>Акустконтакт</string>
+        <string>Ак. контакт</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_obj_sickness">
@@ -1044,7 +1044,7 @@
         </rect>
        </property>
        <property name="text">
-        <string>Толщина, mm</string>
+        <string>Толщ., mm</string>
        </property>
       </widget>
       <widget class="QSpinBox" name="spinBox_obj_sickness">
@@ -2043,14 +2043,14 @@
    <widget class="QStackedWidget" name="stackedWidget_2">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>150</x>
       <y>0</y>
-      <width>351</width>
+      <width>331</width>
       <height>221</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_9">
      <widget class="QFrame" name="frame_for_settings_addition">
@@ -3784,7 +3784,7 @@ background-color: rgb(195, 195, 195);</string>
      <widget class="QFrame" name="frame_for_settings_param">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-10</x>
         <y>0</y>
         <width>341</width>
         <height>221</height>
