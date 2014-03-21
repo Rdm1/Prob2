@@ -1270,7 +1270,7 @@
         <string>Параметры настройки</string>
        </property>
       </widget>
-      <widget class="QComboBox" name="comboBox_settings_2chann_2">
+      <widget class="QComboBox" name="comboBox_language">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2050,7 +2050,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_9">
      <widget class="QFrame" name="frame_for_settings_addition">
@@ -9806,9 +9806,9 @@ background-color: rgb(195, 195, 195);</string>
   <widget class="QProgressBar" name="progressBar_3">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>315</x>
      <y>0</y>
-     <width>86</width>
+     <width>101</width>
      <height>21</height>
     </rect>
    </property>
@@ -9878,8 +9878,8 @@ background-color: rgb(195, 195, 195);</string>
   <widget class="QLabel" name="label_Info_3">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>350</y>
+     <x>190</x>
+     <y>330</y>
      <width>71</width>
      <height>19</height>
     </rect>
