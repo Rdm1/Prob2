@@ -7426,7 +7426,8 @@ bool QCPItemPosition::setParentAnchor(QCPItemAnchor *parentAnchor, bool keepPixe
   QCPItemAnchor *currentParent = parentAnchor;
   while (currentParent)
   {
-    if (QCPItemPosition *currentParentPos = currentParent->toQCPItemPosition())
+   // if (QCPItemPosition *currentParentPos = currentParent->toQCPItemPosition())
+      if (QCPItemPosition *currentParentPos = currentParent->isQCPItemPosition())//changed
     {
       // is a QCPItemPosition, might have further parent, so keep iterating
       if (currentParentPos == this)

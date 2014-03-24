@@ -1317,6 +1317,8 @@ public:
   QCPItemAnchor(QCustomPlot *parentPlot, QCPAbstractItem *parentItem, const QString name, int anchorId=-1);
   virtual ~QCPItemAnchor();
   
+   virtual QCPItemPosition* isQCPItemPosition() { return 0; }//changed
+
   // getters:
   QString name() const { return mName; }
   virtual QPointF pixelPoint() const;
@@ -1349,6 +1351,8 @@ private:
 class QCP_LIB_DECL QCPItemPosition : public QCPItemAnchor
 {
 public:
+     virtual QCPItemPosition* isQCPItemPosition() { return this; }//changed
+
   /*!
     Defines the ways an item position can be specified. Thus it defines what the numbers passed to
     \ref setCoords actually mean.
