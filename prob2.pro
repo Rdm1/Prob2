@@ -1,9 +1,11 @@
 SOURCES += \
     main.cpp \
-    interfaceform.cpp
+    interfaceform.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
-    interfaceform.h
+    interfaceform.h \
+    qcustomplot.h
 
 RESOURCES += \
     Interface_resource.qrc

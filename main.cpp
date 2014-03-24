@@ -10,7 +10,9 @@
 int main(int argc, char *argv[])
 {
    // Q_INIT_RESOURCE(Interface_resourse);
-
+#if QT_VERSION < QT_VERSION_CHECK(5, 0, 0)
+  QApplication::setGraphicsSystem("raster");
+#endif
     QApplication app(argc, argv);
     QTextCodec::setCodecForTr( QTextCodec::codecForName("utf8") );
     Form interface;
