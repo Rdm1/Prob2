@@ -218,12 +218,16 @@ void Form::channel_kanal(){
 
 
 ////////////////////////////
-/*Graph*/
+/////////*Graph part*//////
 
 void Form ::graph_on(){ //slot
-    ui.customPlot->setHidden(false);
+    ui.stackedWidget->setHidden(true);
+    ui.stackedWidget_2->setHidden(true);
+
+    ui.customPlot->setShown(true);
     setupRealtimeDataDemo(ui.customPlot);
     setWindowTitle("Plot: "+demoName);
+
 }
 
 void Form::setupRealtimeDataDemo(QCustomPlot *customPlot)
