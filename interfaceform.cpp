@@ -27,7 +27,8 @@ Form::Form(QWidget*parent)
     connect(ui.pushButton,SIGNAL(clicked()),this,SLOT(priemnik()));
     connect(ui.pushButton_resiever_settings,SIGNAL(clicked()),this,SLOT(vrc()));
 
-    connect(ui.pushButton_Graph,SIGNAL(clicked()),this,SLOT(graph_on()));
+    connect(ui.pushButton_Graph_on,SIGNAL(clicked()),this,SLOT(graph_on()));
+    connect(ui.pushButton_Graph_off,SIGNAL(clicked()),this,SLOT(graph_off()));
 
     ui.page_3->setHidden(true);
     ui.page_2->setHidden(true);
@@ -227,6 +228,16 @@ void Form ::graph_on(){ //slot
     ui.customPlot->setShown(true);
     setupRealtimeDataDemo(ui.customPlot);
     setWindowTitle("Plot: "+demoName);
+
+}
+
+void Form ::graph_off(){ //slot
+    ui.stackedWidget->setShown(true);
+    ui.stackedWidget_2->setShown(true);
+
+    ui.customPlot->setHidden(true);
+   // setupRealtimeDataDemo(ui.customPlot);
+    setWindowTitle("RDM-11");
 
 }
 

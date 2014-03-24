@@ -34,6 +34,7 @@ private slots:
 
 public slots :
  void graph_on();
+ void graph_off();
 void generator();
 void priemnik();
 void vrc();
