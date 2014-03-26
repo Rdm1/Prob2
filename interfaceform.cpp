@@ -123,6 +123,8 @@ void Form ::generator(){
         ui.page_6->setShown(true);
       }
     if(ui.comboBox_menu->currentText()==tr("Настройка")){
+        ui.stackedWidget_settings->setShown(true);
+
         ui.page->setHidden(true);
         ui.page_2->setHidden(true);
         ui.page_3->setHidden(true);
@@ -223,7 +225,7 @@ void Form::channel_kanal(){
 
 void Form ::graph_on(){ //slot
     ui.stackedWidget->setHidden(true);
-    ui.stackedWidget_2->setHidden(true);
+    ui.stackedWidget_settings->setHidden(true);
 
     ui.customPlot->setShown(true);
     setupRealtimeDataDemo(ui.customPlot);
@@ -232,10 +234,11 @@ void Form ::graph_on(){ //slot
 }
 
 void Form ::graph_off(){ //slot
-    ui.stackedWidget->setShown(true);
-    ui.stackedWidget_2->setShown(true);
-
     ui.customPlot->setHidden(true);
+
+    ui.stackedWidget->setShown(true);
+    ui.stackedWidget_settings->setShown(true);
+
    // setupRealtimeDataDemo(ui.customPlot);
     setWindowTitle("RDM-11");
 }
