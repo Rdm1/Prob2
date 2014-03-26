@@ -588,7 +588,7 @@
       </rect>
      </property>
      <property name="currentIndex">
-      <number>5</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page_9">
       <widget class="QFrame" name="frame_for_settings_addition">

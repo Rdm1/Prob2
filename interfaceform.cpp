@@ -238,7 +238,6 @@ void Form ::graph_off(){ //slot
     ui.customPlot->setHidden(true);
    // setupRealtimeDataDemo(ui.customPlot);
     setWindowTitle("RDM-11");
-
 }
 
 void Form::setupRealtimeDataDemo(QCustomPlot *customPlot)
