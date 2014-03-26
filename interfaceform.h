@@ -21,6 +21,8 @@ class Form :public QWidget {
 public :
      Form (QWidget* wgt = 0);
     void setupRealtimeDataDemo(QCustomPlot *customPlot);
+     void setupStyledDemo(QCustomPlot *customPlot);
+
 
 
 
