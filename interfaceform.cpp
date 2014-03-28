@@ -10,11 +10,20 @@
 //#include <QMetaEnum>
 
 
+#define DEBUG
+
 Form::Form(QWidget*parent)
-:QWidget(parent)//,
-//ui(new Ui::Form)
+:QWidget(parent)//,ui(new Ui::Form)
 {
+
+#ifdef DEBUG
+    setWindowTitle("DEBUG_MODE");
+#else
+    setGeometry(0,0,480,272);
+    setWindowFlags(Qt::Popup);// убираем окно состояния
     setFixedSize(480,272);
+#endif
+
     ui.setupUi(this);
     ui.comboBox_menu->setFocus();
     connect(ui.comboBox_menu,SIGNAL(currentIndexChanged(QString )),this,SLOT(generator()));//выбор главного меню
@@ -253,7 +262,8 @@ void Form::setupRealtimeDataDemo(QCustomPlot *customPlot)
   customPlot->addGraph(); // blue line
   customPlot->graph(0)->setPen(QPen(Qt::blue));
   customPlot->graph(0)->setBrush(QBrush(QColor(96, 227, 69)));
-  customPlot->graph(0)->setAntialiasedFill(false);
+  customPlot->graph(0)->setAntialiasedFill(true);
+
   customPlot->addGraph(); // red line
   customPlot->graph(1)->setPen(QPen(Qt::red));
   customPlot->graph(0)->setChannelFillGraph(customPlot->graph(1));
@@ -262,6 +272,7 @@ void Form::setupRealtimeDataDemo(QCustomPlot *customPlot)
   customPlot->graph(2)->setPen(QPen(Qt::blue));
   customPlot->graph(2)->setLineStyle(QCPGraph::lsNone);
   customPlot->graph(2)->setScatterStyle(QCPScatterStyle::ssDisc);
+
   customPlot->addGraph(); // red dot
   customPlot->graph(3)->setPen(QPen(Qt::red));
   customPlot->graph(3)->setLineStyle(QCPGraph::lsNone);
@@ -273,13 +284,13 @@ void Form::setupRealtimeDataDemo(QCustomPlot *customPlot)
   customPlot->xAxis->setTickStep(2);
   customPlot->axisRect()->setupFullAxesBox();
 
-
   QLinearGradient plotGradient;
   plotGradient.setStart(0, 0);
-  plotGradient.setFinalStop(0, 350);
+  plotGradient.setFinalStop(0, 300);
   plotGradient.setColorAt(0, QColor(80, 8, 80));
-  plotGradient.setColorAt(1, QColor(50, 50, 50));
+  plotGradient.setColorAt(1, QColor(0, 0, 0));
   customPlot->setBackground(plotGradient);
+
   QLinearGradient axisRectGradient;
   axisRectGradient.setStart(0, 0);
   axisRectGradient.setFinalStop(0, 350);
@@ -287,9 +298,11 @@ void Form::setupRealtimeDataDemo(QCustomPlot *customPlot)
   axisRectGradient.setColorAt(1, QColor(30, 100, 0));
   customPlot->axisRect()->setBackground(axisRectGradient);
 
+  //QPoint pt1(10, 20);
+
   // setup a timer that repeatedly calls MainWindow::realtimeDataSlot:
  connect(&dataTimer, SIGNAL(timeout()), this, SLOT(realtimeDataSlot()));
-  dataTimer.start(100); // Interval 0 means to refresh as fast as possible
+  dataTimer.start(1); // Interval 0 means to refresh as fast as possible
 }
 
 
@@ -302,7 +315,7 @@ void Form::realtimeDataSlot()
   double key = QDateTime::currentDateTime().toMSecsSinceEpoch()/500.0; //speed
 #endif
   static double lastPointKey = 0;
-  if (key-lastPointKey > 0.01) // at most add point every 10 ms
+  if (key-lastPointKey > 0.1) // at most add point every 50 ms
   {
     double value0 = qSin(key); //sin(key*1.6+cos(key*1.7)*2)*10 + sin(key*1.2+0.56)*20 + 26;
     double value1 = qCos(key); //sin(key*1.3+cos(key*1.2)*1.2)*7 + sin(key*0.9+0.26)*24 + 26;
@@ -323,7 +336,7 @@ void Form::realtimeDataSlot()
     lastPointKey = key;
   }
   // make key axis range scroll with the data (at a constant range size of 8):
-  ui.customPlot->xAxis->setRange(key+0.25, 8, Qt::AlignRight);
+  ui.customPlot->xAxis->setRange(key+4.25, 20, Qt::AlignRight);
   ui.customPlot->replot();
 }
 
@@ -456,3 +469,45 @@ void Form::setupStyledDemo(QCustomPlot *customPlot) //void MainWindow::setupSimp
   arrow->setHead(QCPLineEnding::esSpikeArrow);
 }
 */
+
+/*//Рисование точек
+    QPainter painter(this);
+    painter.setPen(QPen(Qt::black, 3));
+    int n = 8;
+    for (int i = 0; i < n; ++i) {
+    qreal fAngle = 2 * 3.14 * i / n;
+    qreal x = 50 + cos(fAngle) * 40;
+    qreal y = 50 + sin(fAngle) * 40;
+    painter.drawPoint(QPointF(x, y));
+    }
+*/
+
+/*//Рисование линий
+QPainter painter(this);
+painter.setRenderHint(QPainter::Antialiasing, true);
+int n = 8;
+QPointF a[n];
+for (int i = 0; i < n; ++i) {
+qreal fAngle = 2 * 3.14 * i / n;
+qreal x = 50 + cos(fAngle) * 40;
+qreal y = 50 + sin(fAngle) * 40;
+a[i] = QPointF(x, y);
+}
+painter.drawPolyline(a, n);
+*/
+
+/*//Графическая траектория (painter path) //page267
+QPainterPath path;
+QPointF pt1(width(), height() / 2);
+QPointF pt2(width() / 2, -height());
+QPointF pt3(width() / 2, 2 * height());
+QPointF pt4(0, height() / 2);
+path.moveTo(pt1);
+path.cubicTo(pt2, pt3, pt4);
+QRect rect(width() / 4, height() / 4, width() / 2, height() / 2);
+path.addRect(rect);
+path.addEllipse(rect);
+QPainter painter(this);
+painter.setRenderHint(QPainter::Antialiasing, true);
+painter.setPen(QPen(Qt::blue, 6));
+painter.drawPath(path);*/
